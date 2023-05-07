@@ -1,0 +1,59 @@
+﻿Dokumentace k hře dáma v Console App (.NET Framework) v jazyce C#
+
+Aplikace/hra/bot
+Hra Dáma je desková hra pro dva hráče, kteří si střídavě přesunují své kameny po herní ploše. Cílem hry je buďto dostat jeden z vlastních kamenů na protější stranu herní plochy, čímž se stane dámou, nebo sebrat všechny soupeřovy kameny tak, že je nelze dále pohybovat.
+
+Tato hra byla vytvořena v jazyce C# s využitím konzolové aplikace .NET Framework.
+
+Popis použitých technologií
+Aplikace pro hru dámy byla vytvořena s využitím moderního programovacího jazyka C#. Jedná se o objektově orientovaný jazyk, který umožňuje efektivní práci s pamětí a snadné vytváření a úpravu objektů a datových struktur. C# je vývojáři často používán při tvorbě desktopových aplikací, webových aplikací a her.
+
+Pro práci s C# aplikacemi byla použita .NET Framework, což je softwarový framework, který poskytuje programátorům široké spektrum nástrojů a knihoven pro vývoj sofistikovaných aplikací. .NET Framework obsahuje různé funkcionality pro práci s daty, grafikou, sítěmi a dalšími oblastmi.
+
+V této aplikaci byla využita standardní konzolová aplikace pro vizualizaci hry. Konzolové aplikace jsou užitečné pro jednoduché aplikace, které nevyžadují složitou grafiku nebo uživatelské rozhraní. Konzolové aplikace se obvykle spouštějí v příkazovém řádku a používají konzolové vstupy a výstupy pro komunikaci s uživatelem.
+
+V aplikaci byly využity různé konzolové příkazy pro zobrazování hrací desky, tahů hráčů a výpisu stavu hry. Konzolové aplikace lze jednoduše přizpůsobit pro různé jazyky a platformy, což z nich činí velmi univerzální nástroj.
+
+Celkově lze říci, že použití moderních technologií a frameworků umožnilo vytvoření rychlé a efektivní aplikace pro hru dámy, která poskytuje jednoduché uživatelské rozhraní a intuitivní ovládání. Použití konzolového vstupu a výstupu umožňuje spuštění aplikace na různých platformách a snadné přizpůsobení pro různé jazyky.
+
+Stručný popis jak to funguje uvnitř
+Hra se skládá z několika tříd. Třída Hra, která má metodu Main, vytváří novou instanci třídy Deska, na které jsou poté vytvořeny kameny. Poté jsou vytvořeni hráči a hra může začít. Hráči se střídají v tahání kamenů. Pokud hráč dokáže soupeři sebrat kámen, je povinen tak učinit a pokračovat v dalším tahu. Pokud se hráč dostane na druhou stranu desky, jeho kámen se stane dámou.
+
+V třídě Deska jsou definovány vlastnosti a metody pro vytváření hrací desky, generování kamenů, umísťování kamenů na desku, vykreslování hrací desky a další funkce. V této třídě jsou také definovány metody pro kontrolu výhry a kontroly povolených tahů.
+
+Třída Checker reprezentuje každý jednotlivý kámen na herní ploše. Kámen má určitou pozici na desce, kterou lze měnit. Každý kámen má také svou barvu a symbol, kterým je na herní ploše reprezentován.
+
+V každém tahu se hráč pohybuje o jedno políčko diagonálně směrem k soupeřově straně desky a pokud je na cestě kámen soupeře, může ho skočit a tím ho sebrat. Pokud hráč sebere kámen soupeře, je odstraněn z desky a hráč pokračuje v tahu. Pokud hráč nedokáže táhnout nebo se mu nedá soupeřova kameny sebrat, končí jeho tah a je na řadě soupeř.
+
+Dámy mají větší tahovou sílu než obyčejné kameny, mohou táhnout o více políček diagonálně v jakémkoliv směru a také mohou skákat přes více soupeřových kamenů najednou. Pokud hráč získá dámu, jeho kámen se nahradí dámou a hráč má větší šanci na vítězství.
+
+Cílem hry je soupeře zbavit všech jeho kamenů nebo mu znemožnit další tahy. Hráči musí používat strategii a taktiku, aby dosáhli výhry, a musí být ostražití, aby se nedostali do pasti, kterou jim připraví soupeř. Hra dáma je tradiční desková hra, která se hraje po celém světě a má mnoho různých variant.
+
+V některých verzích dámy mohou být po vyřazení soupeřova kamene nahrazeny zpět na hrací desku, což umožňuje vracet se zpět do hry a snižuje tak možnost, že hráč bude bez kamenů.
+
+Hra dáma je známá svou vysokou obtížností a propracovaností strategií. Existuje mnoho knih, článků a tutoriálů, které se věnují různým strategiím a taktikám pro hru dáma. Hráči se musí naučit, jak předvídat tahy soupeře a jak si vytvářet silné pozice na desce. Důležité je také umět se rozhodovat, kdy je správné sebrat kámen soupeře a kdy ne.
+
+V současné době existuje mnoho počítačových programů, které umějí hrát dámu na vysoké úrovni a jsou schopné porazit i velmi zkušené hráče. Tyto programy využívají pokročilé algoritmy pro vyhodnocování pozic na desce a pro výběr nejlepšího tahu.
+
+Hra dáma je stále velmi populární a pořádají se různé turnaje a soutěže, kde se mohou hráči utkat s ostatními hráči a ukázat své schopnosti. Hra dáma je skvělou zábavou pro celou rodinu a může posloužit jako skvělý trénink pro rozvoj strategického myšlení a plánování.
+
+Návod na použití projektu
+Pro spuštění projektu je třeba mít nainstalovaný .NET Framework. Po spuštění projektu se hráči střídají v tahání kamenů. Hráči zadávají své tahy pomocí souřadnic pozice kamene, kterým chtějí táhnout, a nové pozice, na kterou chtějí kámen přesunout.
+
+Možný rozvoj v budou už na tom, že každý tah musí být validní a hráči se střídají, dokud jednoho z nich neporazí soupeřova dáma nebo se hra neuzavře remízou.
+
+Jediným možným rozšířením by mohla být implementace AI pro hru proti počítači. Bylo by potřeba vytvořit novou třídu pro AI a napsat algoritmus, který by určoval nejlepší tah na základě aktuálního stavu hry. Pro vytvoření takové AI by bylo potřeba použít některý z algoritmů pro hledání nejlepší cesty, jako je například algoritmus Minimax, nebo algoritmus Alpha-Beta pruning.
+
+Dalším možným vylepšením by bylo umožnit ukládání a načítání hry ze souboru. Toto rozšíření by vyžadovalo implementaci funkcí pro načítání a ukládání hry ze souboru a pravděpodobně také vytvoření uživatelského rozhraní pro výběr souboru.
+
+Hru dámy lze využít jako zábavnou aktivitu pro trénování logického myšlení, plánování a strategického myšlení. Může být také použita jako vzdělávací nástroj pro výuku programování a tvorbu her, nebo jako součást většího projektu např. deskové hry s multiplayer funkcionalitou.
+
+Díky těmto rozšířením by bylo možné tuto hru ještě více zlepšit a přizpůsobit různým uživatelským potřebám.
+
+Vývoj této hry může být také velmi poučný pro ty, kteří se chtějí naučit programovat. Jedná se o poměrně jednoduchý projekt, který ale vyžaduje znalosti základních programovacích konceptů, jako jsou podmínky, cykly, pole a objekty. Studenti by mohli tuto hru použít jako praktickou úlohu pro procvičení svých dovedností a rozšíření svých znalostí v oblasti programování.
+
+Vzhledem k tomu, že tato hra může být hrána mezi dvěma hráči, může být také skvělou zábavnou aktivitou pro trénování logického a strategického myšlení. Hráči se musí rozhodnout, jaký tah provedou, aby porazili svého soupeře. Hra tedy zvyšuje jejich schopnost plánovat a přemýšlet dopředu.
+
+V konečném důsledku je projekt hry dámy velmi užitečným nástrojem pro rozvoj programovacích dovedností a zlepšení logického myšlení. Díky jednoduchosti implementace a možnosti rozšíření je ideální pro začínající programátory i pro pokročilé vývojáře, kteří chtějí zlepšit své dovednosti v oblasti algoritmického myšlení a tvorby her.
+
+Celkově lze tedy říci, že návod na použití projektu je velmi jednoduchý. Stačí mít nainstalovaný .NET Framework a spustit aplikaci. Poté hráči zadávají své tahy a snaží se porazit svého soupeře. Pro budoucí vývoj lze použít různé algoritmy pro hledání nejlepšího tahu a přidat možnost ukládání a načítání hry ze souboru. Hra dámy může být také skvělou zábavou a tréninkem logického a strategického myšlení.
